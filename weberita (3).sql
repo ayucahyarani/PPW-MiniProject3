@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Apr 2024 pada 23.46
--- Versi server: 10.4.27-MariaDB
--- Versi PHP: 8.2.0
+-- Waktu pembuatan: 18 Apr 2024 pada 14.29
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `website_berita`
+-- Database: `weberita`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,7 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id_berita`, `id_kategori`, `judul_berita`, `penulis_berita`, `tgl_berita`, `isi_berita`, `gambar_berita`) VALUES
-(10, 1, 'Musdalub dan Pelantikan DPD AMPI Kaltim 2024, Seruan Dukungan terhadap Rudy Mas’ud Maju sebagai Calon Gubernur Menggema', 'Agus Susanto', '2024-03-23', 'Musyawarah daerah luar biasa (Musdalub)  Angkatan Muda Pembaharuan Indonesia (AMPI) Kalimantan Timur 2024 dilaksanakan di Hotel Mercure Samarinda, Jumat (22/3/2024). Acara ini digelar sekaligus pelantikan pengurus DPD AMPI provinsi Kalimantan Timur dan ditutup dengan acara buka puasa bersama.\r\n\r\nRudy Mas’ud sebagai Ketua Partai Golkar Kalimantan Timur turut hadir dalam acara pelantikan pengurus DPD AMPI Kalimantan Timur. Seruan dukungan untuk Rudy Mas’ud menjadi gubernur pun terdengar dalam ruangan pelantikan tersebut.\r\n\r\nSebelumnya, Sekretaris Jenderal AMPI, Ahmad Andi Bahri dalam sambutannya mengatakan bahwa pihaknya akan mendukung secara penuh kader Golkar yang akan maju dalam pemilihan gubernur Kalimantan Timur.\r\n\r\n“Bang Rudy akan maju. Saya menunjuk Arie, anggota dewan, untuk memenangkan Bang Rudy. Jika Bang Rudy kalah, kalian bertanggung jawab. Jika ketua AMPI yang akan ditetapkan nanti memiliki jumlah suara dari Pileg 21.000, maka ketua harus menyumbang 63.000 suara untuk Bang Rudy. Arie Wibowo 5.000 maka kali 3 menjadi 15.000,” ujarnya. Besar kemungkinan Rudy Mas’ud dapat menjadi calon gubernur Kalimantan Timur pada November 2024 nanti. Namun untuk itu, AMPI Kalimantan Timur berfokus kepada pengkaderan yang sebelumnya sempat mengalami pelambatan.\r\n\r\n“Yang mendaftar hanya satu, Pak Apansyah, yang juga baru saja terpilih sebagai anggota DPRD Kaltim. Meskipun AMPI selama ini masih berjalan tanpa ketua, diharapkan dengan adanya ketua yang baru, AMPI akan semakin progresif,” ujar Andi Ahmad Bahri.\r\n\r\nHarapan pada pelantikan ketua baru AMPI Kalimantan Timur merupakan langkah pertama AMPI untuk menentukan arah ke depan. Apalagi dengan target pemilihan Gubernur Kalimantan Timur nantinya.\r\n\r\nSelain itu, ketika Media Kaltim mewawancarai Rudy Mas’ud tentang kans dirinya naik menjadi calon Gubernur Kalimantan Timur pada November nanti, ia tertawa dan mengaku bahwa keputusan masih di tangan partai.\r\n\r\n“Saya menunggu keputusan dari partai. Kita liat saja nanti,” jawabnya.\r\n\r\nPewarta : Khoirul Umam\r\nEditor : Nicha R', 'politik1.jpg'),
+(10, 1, 'Musdalub dan Pelantikan DPD AMPI Kaltim 2024, Seruan Dukungan terhadap Rudy Mas’ud Maju sebagai Calon Gubernur Menggema', 'Agus Susanto', '2024-04-05', 'Musyawarah daerah luar biasa (Musdalub)  Angkatan Muda Pembaharuan Indonesia (AMPI) Kalimantan Timur 2024 dilaksanakan di Hotel Mercure Samarinda, Jumat (22/3/2024). Acara ini digelar sekaligus pelantikan pengurus DPD AMPI provinsi Kalimantan Timur dan ditutup dengan acara buka puasa bersama.\r\n\r\nRudy Mas’ud sebagai Ketua Partai Golkar Kalimantan Timur turut hadir dalam acara pelantikan pengurus DPD AMPI Kalimantan Timur. Seruan dukungan untuk Rudy Mas’ud menjadi gubernur pun terdengar dalam ruangan pelantikan tersebut.\r\n\r\nSebelumnya, Sekretaris Jenderal AMPI, Ahmad Andi Bahri dalam sambutannya mengatakan bahwa pihaknya akan mendukung secara penuh kader Golkar yang akan maju dalam pemilihan gubernur Kalimantan Timur.\r\n\r\n“Bang Rudy akan maju. Saya menunjuk Arie, anggota dewan, untuk memenangkan Bang Rudy. Jika Bang Rudy kalah, kalian bertanggung jawab. Jika ketua AMPI yang akan ditetapkan nanti memiliki jumlah suara dari Pileg 21.000, maka ketua harus menyumbang 63.000 suara untuk Bang Rudy. Arie Wibowo 5.000 maka kali 3 menjadi 15.000,” ujarnya. Besar kemungkinan Rudy Mas’ud dapat menjadi calon gubernur Kalimantan Timur pada November 2024 nanti. Namun untuk itu, AMPI Kalimantan Timur berfokus kepada pengkaderan yang sebelumnya sempat mengalami pelambatan.\r\n\r\n“Yang mendaftar hanya satu, Pak Apansyah, yang juga baru saja terpilih sebagai anggota DPRD Kaltim. Meskipun AMPI selama ini masih berjalan tanpa ketua, diharapkan dengan adanya ketua yang baru, AMPI akan semakin progresif,” ujar Andi Ahmad Bahri.\r\n\r\nHarapan pada pelantikan ketua baru AMPI Kalimantan Timur merupakan langkah pertama AMPI untuk menentukan arah ke depan. Apalagi dengan target pemilihan Gubernur Kalimantan Timur nantinya.\r\n\r\nSelain itu, ketika Media Kaltim mewawancarai Rudy Mas’ud tentang kans dirinya naik menjadi calon Gubernur Kalimantan Timur pada November nanti, ia tertawa dan mengaku bahwa keputusan masih di tangan partai.\r\n\r\n“Saya menunggu keputusan dari partai. Kita liat saja nanti,” jawabnya.\r\n\r\nPewarta : Khoirul Umam\r\nEditor : Nicha R', 'politik1.jpg'),
 (11, 1, 'Golkar Kembali Dapat Jatah Ketua DPRD Kaltim, Rudy Mas’ud Sebut Penunjukannya Wewenang DPP', 'Agus Susansto', '2024-03-14', 'Partai Golkar dipastikan menjadi pemenang di Pileg 2024 Anggota DPRD Kaltim dengan 159.394 jumlah suara sah. Bila dihitung perolehan kursinya, partai berlambang beringin ini akan mendapat 15 kursi dan berhak mendapatkan posisi Ketua DPRD Kaltim.\r\n\r\nDPD I Golkar Kaltim Rudy Mas’ud menyebut penunjukan Ketua DPRD merupakan hak dari DPP Golkar. Ia menjelaskan bahwa mekanisme penunjukan pimpinan Ketua DPRD Kaltim adalah dengan sistem pembobotan. DPD Golkat sebutnya, hanya berwenang memberikan rekomendasi 2-3 nama dari hasil pembobotan.\r\n\r\n“Kursi ketua DPRD mekanisme pembobotan di hitung PDLT (Prestasi, Dedikasi, Loyalitas dan Tanpa Celah). Kita hanya membawa rekomendasi dua sampai tiga nama,” jelasnya via telepon, Rabu kemarin (13/3/2024).\r\n\r\nIa merangkan lebih lanjut, bahwa raihan suara pada pileg merupakan salah satu bentuk prestasi. Sehingga menjadi salah satu faktor untuk menentukan siapa yang menjadi rekomendasi Ketua DPRD ke DPP Golkar.\r\n\r\nPartai Golkar pada periode 2019-2024 mendaptkan 12 kursi, sementara pada periode 2024-2029 diprediksi Golkar akan mendapat 15 kursi. Bila berkaca ada jumlah raihan suara ada periode 2019-2024, Makmur HAPK didapuk menjadi Ketua DPRD Kaltim dengan perolehan suara 38 ribu lebih. Saat itu Makmur merupakan politisi senior Golkar yang menjabat Ketua Harian DPD I Golkar Kaltim. Namun dipertengahan jabatannya ia harus digantikan Hasanuddin Mas’ud karena konflik internal partai. Sementara pada periode 2024-2029, Abdullah merupakan caleg Golkar dengan suara terbanyak sebesar 48.180 suara sah di daerah pemilihan (dapil) 2, Balikpapan. Ia merupakan Ketua DPRD Balikpapan, yang maju di Pileg 2024 DPRD Kaltim. Dibawahnya, ada Hasanuddin Mas’ud dengan raihan 42.885 suara yang tak lain merupakan petahana dan Ketua DPRD Kaltim periode ini.(Eky)\r\n\r\nPenulis: Andi Desky', 'politik2.jpg'),
 (12, 2, 'Sinergi dan Inovasi TPID Dalam Mendukung Pengendalian Inflasi pangan melalui GNPIP wilayah Kalimantan 2024', 'Boy Saputra', '2024-03-27', 'KBRN, Samarinda : Menghadapi tantangan pengendalian inflasi pada tahun 2024 antara lain produksi pangan domestik yang terbatas dan harga pangan global yang meningkat, sinergi dan akselerasi penguatan pasokan dan efisiensi rantai pasok perlu terus dilanjutkan. Upaya ini dilanjutkan melalui Gerakan Nasional Penguatan Inflasi Pangan (GNPIP) tahun 2024 dengan 7 Program Unggulan yang dilaksanakan pada kegiatan GNPIP Wilayah Kalimantan 2024 hari ini (27/3/2024) di Samarinda, dengan tema \"Sinergi dan Inovasi untuk Mendorong Penguatan Pasokan dan Efisiensi Rantai Pasok Untuk Mendukung Stabilisasi Harga dan Ketahanan Pangan Kalimantan\".\r\n\r\nTujuh program unggulan tersebut meliputi penguatan ketahanan komoditas pangan strategis, penguatan kapasitas budidaya pangan mandiri, optimalisasi Kerjasama Antar Daerah (KAD), dukungan fasilitasi distribusi pangan, penguatan digitalisasi dan data pangan, dukungan optimalisasi operasi pasar/pasar murah/SPHP/GPM serta penguatan koordinasi dan komunikasi.\r\n\r\nDeputi Gubernur Bank Indonesia, Doni P. Joewono menekankan pentingnya extra effort dalam mengawal inflasi pangan di tahun 2024, termasuk di periode Hari Besar Keagamaan nasional (HBKN). Beberapa tantangan perlu diantisipasi seperti kondisi curah hujan yang tinggi, fluktuasi produksi antar waktu dan antar daerah, hingga pemenuhan komoditas pangan impor. Secara khusus di Kalimantan, sejalan dengan potensi peningkatan permintaan sebagai dampak masifnya pembangunan proyek strategis nasional, termasuk Ibu Kota Nusantara (IKN), upaya penguatan pasokan dan efisiensi rantai pasok menjadi krusial untuk memastikan stabilitas harga dan ketahanan pangan di wilayah Kalimantan.\r\n\r\n“Oleh karenanya diperlukan sinergi erat Tim Pengendalian Inflasi Pusat dan Daerah (TPIP-TPID) melalui GNPIP di berbagai daerah. Program GNPIP tahun 2024 diperkuat dengan mengusung 7 (tujuh) program dan 12 sub program, dengan fokus komoditas yaitu beras, aneka cabai, dan bawang merah, serta komoditas lainnya yang sesuai dengan karakteristik dan kondisi di masing-masing wilayah”ucapnya.\r\n\r\nSejalan dengan itu, Deputi Bidang Koordinasi Ekonomi Makro dan Keuangan, Kementerian Koordinator Bidang Perekonomian RI, Ferry Irawan menyampaikan tantangan ketersediaan pasokan merupakan tantangan antar wilayah dan antar waktu. Ditengah terkendalinya inflasi, perkembangan inflasi pangan terus dipantau, terutama komoditas beras. Sejumlah kebijakan yang dilakukan untuk meredam kenaikan harga beras antara lain menjaga stok cadangan dan mempercepat penyaluran SPHP di pasar tradisional, pengalihan CBP ke komersil untuk mengendalikan harga beras premium, penyaluran bantuan pangan beras kepada 22 jt KPM dan penetapan relaksasi harga eceran tertinggi. Di sisi lain, kebijakan ini perlu didukung dengan peningkatan produksi pertanian melalui pemanfaatan teknologi dan digitalisasi, pemerataan akses dan informasi, pelatihan dan pendampingan SDM yang terlatih dan pembiayaan.', 'bisnis1.jpeg'),
 (13, 5, 'Jurnalis Samarinda Ikuti Pelatihan Bantuan Hidup Dasar', 'Redaksi', '2024-02-23', 'Dinas Kesehatan (Dinkes) Kota Samarinda menggelar pelatihan bantuan hidup dasar (BHD) kepada jurnalis Samarinda, yang berlangsung di kantor Dinkes Kota Samarinda, pada Jumat (23/2/2024). Pelatihan ini bertujuan untuk meningkatkan keterampilan dan pengetahuan para anggota dalam memberikan pertolongan pertama pada korban kecelakaan atau bencana.\r\n\r\nKepala Dinas Kesehatan Kota Samarinda, Ismid Kusasih, mengatakan, pelatihan BHD ini sangat penting mengingat anggota jurnalis sering menjadi garda terdepan dalam menangani situasi gawat darurat di masyarakat.\r\n\r\n“Dengan pelatihan ini, kami harapkan anggota Satpol PP dapat memberikan bantuan hidup dasar yang tepat dan benar kepada korban, sehingga dapat mencegah kematian atau kerusakan organ yang lebih parah,” ujarnya.\r\n\r\nBantuan hidup dasar adalah serangkaian tindakan yang dilakukan untuk mempertahankan fungsi pernapasan dan sirkulasi darah pada korban yang mengalami henti napas atau henti jantung. Tindakan ini meliputi pemeriksaan respon, membuka jalan napas, memberikan napas buatan, melakukan resusitasi jantung paru (RJP), dan menggunakan defibrilator otomatis eksternal (AED) jika tersedia1.\r\n\r\nMenurutnya, pelatihan BHD ini juga sejalan dengan program pemerintah pusat untuk meningkatkan kesiapsiagaan masyarakat dalam menghadapi bencana.\r\n\r\n“Kami berharap, dengan adanya pelatihan ini, dapat menjadi agen perubahan yang dapat mengajarkan dan mensosialisasikan BHD kepada masyarakat luas, sehingga dapat membentuk budaya siaga bencana di Samarinda,” katanya.\r\n\r\nMateri pelatihan meliputi pengenalan awal dan penanganan pertama korban, airway management, bantuan pernafasan, bantuan sirkulasi, stabilisasi dan transportasi, penanganan syok, perdarahan, dan henti jantung.\r\n\r\nPeserta pelatihan tampak antusias mengikuti materi dan praktek yang diberikan oleh narasumber.\r\n\r\n“Saya merasa mendapat ilmu yang bermanfaat, yang bisa saya terapkan di lapangan maupun di rumah. Saya juga ingin mengajak teman-teman dan keluarga saya untuk belajar BHD, karena kita tidak pernah tahu kapan kita akan menghadapi situasi gawat darurat,” pungkasnya. #\r\n\r\nReporter: Sandi | Editor: wong', 'kesehatan1.jpeg'),
@@ -58,6 +58,22 @@ INSERT INTO `berita` (`id_berita`, `id_kategori`, `judul_berita`, `penulis_berit
 (23, 3, 'Atlet Sepatu Roda Latihan Tipis Selama Ramadan', 'Ainur Rofiah', '2024-03-25', 'Atlet-atlet sepatu roda Kalimantan Timur (Kaltim) mempersempit jadwal latihan  selama bulan Ramadan berlangsung.\r\n\r\nMenginap di Hotel Mesra dan menjalani latihan di Komplek GOR Madya Sempaja, Kepala Bidang  Pembinaan dan Prestasi Pengurus Provinsi Persatuan Sepatu Roda Seluruh Indonesia (Kabid Binpres Pengprov Porserosi) Kaltim, Romiansyah mengaku ada beberapa pola latihan.\r\n\r\nJumlah atlet yang akan bertanding di Pekan Olahraga Nasional (PON) XXI Aceh dan Sumtera Utara (Sumut) masih tetap.\r\n\r\n“Atletnya 4 putra  4 putri pelatih dua ditambah 1 ofisial, jadi ada 3,” kata Romi, Senin (25/3/2024).\r\n\r\nUntuk nomor tanding yang diikuti masih menunggu rapat kerja nasional (rakernas). Namun menurutnya, kemungkinan akan sama seperti pada PON XX di Papua.\r\n\r\nDiketahui pada PON Papua lalu, ada 25 nomor tanding. Tetapi, tetap pihaknya akan menunggu hasil keputusan dari rakernas.\r\n\r\n“Target 1 emas, 7 perak, nah peraknya ini nanti yang akan kita baca untuk bisa ke emas kah, atau malah ke perunggu,” urainya.\r\n\r\nEditor: Aspian Nur', 'olahraga3.jpeg'),
 (24, 1, 'Tudingan Kecurangan Pemilu yang Disampaikan ke Bawaslu Kaltim, Ini Tanggapan Ketua Gerindra Andi Harun', 'Agus Susanto', '2024-02-25', 'Ketua DPD Gerindra Kaltim, Andi Harun, memberikan respons terhadap demonstrasi Komunitas Masyarakat Pendukung Anies Muhaimin (Kompak) Samarinda di kantor Bawaslu Kaltim Jumat (23/2) lalu.\r\n\r\nAndi Harun menilai bahwa tudingan kecurangan dalam pemilu di Kaltim yang dilontarkan oleh Kompak perlu dihadapi dengan ketenangan dan melalui koridor hukum.\r\n\r\nMenurutnya, sebagai negara hukum, setiap perselisihan, termasuk dugaan kecurangan pemilu 2024, sebaiknya diselesaikan melalui fasilitas hukum untuk menjaga kondusifitas kehidupan masyarakat di Samarinda.\r\n\r\n“Hukum kita telah mengatur sistem penyelesaian setiap dugaan perkara pemilu. Kita harus menjunjung tinggi koridor hukum dan mekanisme penyelesaian yang telah diatur. Dugaan kecurangan harus disajikan dengan fakta dan bukti, lalu diproses sesuai dengan ketentuan hukum,” ujar Andi.\r\n\r\nLebih lanjut, Andi Harun juga menyampaikan prihatin terhadap penyelenggara pemilu seperti KPPS, PTPS, Linmas, dan lain-lain. Dia menekankan perlunya menghargai upaya mereka sebagai pahlawan demokrasi yang bekerja tanpa istirahat.\r\n\r\n“Semua harus kita jaga agar tidak ada kegiatan yang mengganggu sosial ekonomi masyarakat di kota ini. Jika semua taat pada hukum, insya Allah semuanya akan berjalan baik,” tambahnya. Selaku perwakilan partai Gerindra, Andi menyampaikan terima kasih kepada seluruh warga Kaltim yang telah melaksanakan hak pilihnya dalam pemilihan 14 Februari lalu dan memilih calon presiden dan wakil presiden dari partai Gerindra, yakni Prabowo-Gibran.\r\nIa menekankan pentingnya menghormati pilihan rakyat sebagai wujud apresiasi terhadap demokrasi.\r\n\r\n“Terhadap itu semua, jangan hanya memberi apresiasi kepada penyelenggara pemilu, tapi juga berikan apresiasi kepada pilihan rakyat ini. Semua pihak harus berhati-hati agar masyarakat tidak merasa bahwa pilihan mereka dihargai rendah atau dianggap sebagai rekayasa,” ujar Ketua Gerindra.\r\n\r\nLebih lanjut, Ketua DPD Gerindra Kaltim ini menyatakan bahwa pilihan masyarakat Samarinda tersebut menjadi tanda bahwa program yang ditawarkan oleh Prabowo Gibran mendapat dukungan luas dari masyarakat.\r\n\r\n“Program yang sesuai dengan keinginan masyarakat Kaltim telah mendapatkan dukungan yang signifikan,” tambahnya.\r\n\r\nMengakhiri pernyataannya, Andi mengajak semua pihak untuk tidak mengadakan kegiatan yang dapat memicu kemarahan masyarakat. “Jangan sampai pilihan rakyat dihargai dengan cara yang bisa mengganggu keharmonisan masyarakat. Mari kita jaga suasana damai dan hormati keputusan yang telah diambil oleh warga,” pungkasnya. Penulis: Hanafi\r\nEditor: Agus S', 'politik4.jpg'),
 (25, 1, 'Bola Panas Hak Angket dan Interpelasi Kecurangan Pemilu, Masing-Masing Kubu Saling Menunggu', 'Agus Susanto', '2024-02-23', 'Capres Ganjar Pranowo mendorong PDIP dan PPP menggulirkan hak angket di DPR atas dugaan kecurangan Pemilu 2024. Jika DPR tidak siap dengan hak angket, Ganjar mendorong penggunaan hak interpelasi atau rapat kerja.\r\n\r\nUsulan ini, diklaimnya bukan saja karena kepentingan pribadinya saja tapi juga bagian dari menyuarakan keresahan para relawan dan masyarakat yang kerap mengirimkan sejumlah foto, dokumen serta video temuan kecurangan di lapangan.\r\n\r\n“Jika DPR tak siap dengan hak angket, saya mendorong penggunaan hak interpelasi DPR untuk mengkritisi kecurangan pada Pilpres 2024,” kata Ganjar dalam keterangan tertulis di Jakarta, Senin (19/2/2024).\r\n\r\nKetua Majelis Kehormatan PPP Zarkasih Nur meminta Plt Ketum PPP Muhammad Mardiono beserta jajaran pengurus dan Fraksi PPP untuk hati-hati menyikapi inisiasi hak angket sebagai langkah mengusut dugaan kecurangan pilpres. Zarkasih mengatakan langkah tersebut harus disikapi dengan teliti.\r\n\r\n“Hak Angket harus dipikirkan matang-matang, harus disikapi secara cerdas dan teliti, kami rasa tidak perlu sejauh itu, hak angket tidak harus sejauh itu, sebab kalau ada kecurangan pemilu kan sudah ada jalurnya,” kata KH Zarkasih Nur dalam keterangannya, Kamis (22/2/2024). Usulan Ganjar ini mendapatkan dukungan dari Capres nomor urut 3 Anies Baswedan. Anies menyatakan partai koalisi perubahan siap mendukung hak angket yang diusulkan Ganjar. Koalisi Perubahan terdiri dari 3 partai politik yakni NasDem, PKB dan PKS.\r\n\r\n“Saya sampaikan, ketika insiatif hak angket itu dilakukan maka tiga partai ini siap ikut,” tegasnya belum lama ini.\r\n\r\nTiga partai dalam koalisi ini sendiri yakni NasDem, PKB dan PKS telah melakukan pertemuan dan menggelar konferensi pers Jumat, (23/2/2024). Usai pertemuan itu Surya Paloh Ketua Umum NasDem mengatakan pihaknya menunggu inisiasi menggulirkan hak angket dan interpelasi ini dari PDI Perjuangan.\r\n\r\n“Itu hak berdemokrasi, dalam hal ini pendukung Anies dan Cak Imin mendukung hak tersebut. Prosesnya gimana ? Biarkan mengalir aja. Kenapa bukan kita yang menggulirkan, barangkali kita masih sayang sama PDIP, jadi kita masih menunggu.\r\n\r\nTerkait pertemuan dengan Megawati diharapkan Surya Paloh tidak dalam waktu yang lama.\r\n\r\n“Saya katakan mas Ganjar menggagas itu hak konstitisional, itu sebuah ide. Kalau itu jalan yang mau ditempuh, sayang sekali kalau kita abaikan. Kalau saya tetap landasannya konstitusional,” tandasnya. Penulis : Andi Desky', 'politik5.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `contact_messages`
+--
+
+CREATE TABLE `contact_messages` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `judul_ulasan` varchar(100) DEFAULT NULL,
+  `content` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -90,10 +106,20 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
 
 CREATE TABLE `ulasan` (
   `id_ulasan` int(11) NOT NULL,
+  `id_berita` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `judul_ulasan` varchar(50) NOT NULL,
   `isi_ulasan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `ulasan`
+--
+
+INSERT INTO `ulasan` (`id_ulasan`, `id_berita`, `id_user`, `judul_ulasan`, `isi_ulasan`) VALUES
+(2, 10, 10, 'Ulasan Baru', 'test'),
+(3, 10, 10, 'Ulasan Baru', 'hai'),
+(4, 11, 10, 'Ulasan Baru', 'farrelsirah');
 
 -- --------------------------------------------------------
 
@@ -106,15 +132,25 @@ CREATE TABLE `user` (
   `username` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `role` enum('admin','user') NOT NULL DEFAULT 'user'
+  `thumbnail` varchar(25) NOT NULL DEFAULT 'logo.png',
+  `role` enum('admin','user','reviewer') NOT NULL DEFAULT 'user',
+  `jeniskelamin` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `role`) VALUES
-(1, 'admin', 'admin123@gmail.com', '123456', 'admin');
+INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `thumbnail`, `role`, `jeniskelamin`) VALUES
+(1, 'admin', 'admin@gmail.com', '123123', 'logo.png', 'admin', NULL),
+(2, 'ana', 'ana@gmail.com', '456456', 'logo.png', 'user', NULL),
+(3, 'reviewer', 'reviewer@gmail.com', '789789', 'logo.png', 'reviewer', NULL),
+(9, '8ifarrel', '8ifarrel@gmail.com', 'mautauaja05', 'logo.png', 'user', NULL),
+(10, 'farrelsirah', 'farrelsirah@gmail.com', 'mautauaja05', 'logo.png', 'reviewer', NULL),
+(11, 'abc', 'abc@gmail.com', '12345678', 'logo.png', 'admin', NULL),
+(14, 'abcd', 'abcd@gmail.com', 'mautauaja18', 'Screenshot 2023-08-07 052', 'admin', 'Perempuan'),
+(15, 'abc', 'abc@gmail.com', 'mautauaja18', 'Disetujui.jpg', 'admin', 'Laki-Laki'),
+(16, 'aaa', 'ccc@gmail.com', 'mautauaja18', 'logo.png', 'admin', 'Perempuan');
 
 --
 -- Indexes for dumped tables
@@ -128,6 +164,13 @@ ALTER TABLE `berita`
   ADD KEY `berita_ibfk_1` (`id_kategori`);
 
 --
+-- Indeks untuk tabel `contact_messages`
+--
+ALTER TABLE `contact_messages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
@@ -137,8 +180,7 @@ ALTER TABLE `kategori`
 -- Indeks untuk tabel `ulasan`
 --
 ALTER TABLE `ulasan`
-  ADD PRIMARY KEY (`id_ulasan`),
-  ADD UNIQUE KEY `id_user` (`id_user`);
+  ADD PRIMARY KEY (`id_ulasan`);
 
 --
 -- Indeks untuk tabel `user`
@@ -157,6 +199,12 @@ ALTER TABLE `berita`
   MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
+-- AUTO_INCREMENT untuk tabel `contact_messages`
+--
+ALTER TABLE `contact_messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
@@ -166,13 +214,13 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT untuk tabel `ulasan`
 --
 ALTER TABLE `ulasan`
-  MODIFY `id_ulasan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ulasan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -183,6 +231,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `berita`
   ADD CONSTRAINT `berita_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `contact_messages`
+--
+ALTER TABLE `contact_messages`
+  ADD CONSTRAINT `contact_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

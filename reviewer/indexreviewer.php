@@ -5,11 +5,10 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 include "../koneksi.php";
+$query = mysqli_query($koneksi, "SELECT * FROM  user WHERE id_user='$_SESSION[id]'");
+$data = mysqli_fetch_array($query);
 
 include "header.php";
-
-$query = mysqli_query($koneksi, "SELECT * FROM user WHERE role = 'admin'");
-$data = mysqli_fetch_array($query);
 ?>
 <div class="col py-3">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,11 +22,8 @@ $data = mysqli_fetch_array($query);
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="indexadmin.php">Home</a>
-                    </li>
                     <form class="d-flex" method="post">
-                        <input class="form-control me-2" type="text" name="keyword" placeholder="Cari Username Admin" aria-label="Search">
+                        <input class="form-control me-2" type="text" name="keyword" placeholder="Cari Judul Berita" aria-label="Search">
                         <button class="btn btn-outline-dark" type="submit" name="cari">Search</button>
                     </form>
                 </ul>
@@ -45,8 +41,7 @@ $data = mysqli_fetch_array($query);
                 <div class="card border-0">
                     <div class="card-header">
                         <div class="d-flex justify-content-between">
-                            <h2 class="text-white fw-bold">DATA ADMIN</h2>
-                            <a href="tambahadminpage.php" class="btn btn-secondary fw-bold">Tambah Admin</a>
+                            <h2 class="fw-bold text-white">DATA BERITA (Reviewer View)</h2>
                         </div>
                     </div>
                     <div class="card-body">
@@ -54,15 +49,20 @@ $data = mysqli_fetch_array($query);
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
-                                        <th>Username</th>
-                                        <th>Email</th>
-                                        <th>Foto Profile</th>
-                                        <th>Action</th>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Judul</th>
+                                        <th scope="col">Kategori</th>
+                                        <th scope="col">Penulis</th>
+                                        <th scope="col">Tanggal</th>
+                                        <th scope="col">Gambar</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+
                                     <?php
+                                    include "../koneksi.php";
+                                    error_reporting(0);
                                     $limit = 5;
                                     if (isset($_GET["page"])) {
                                         $page  = $_GET["page"];
@@ -70,26 +70,27 @@ $data = mysqli_fetch_array($query);
                                         $page = 1;
                                     };
                                     $start_from = ($page - 1) * $limit;
-                                    $level = "admin";
                                     $no = 1;
-                                    if (isset($_POST['keyword'])) {
-                                        $keyword = $_POST['keyword'];
-                                        $query = mysqli_query($koneksi, "SELECT * FROM user WHERE username LIKE '%$keyword%' AND role='$level'");
+                                    $keyword = $_POST['keyword'];
+                                    if ($keyword != '') {
+                                        $query = mysqli_query($koneksi, "SELECT * FROM berita INNER JOIN kategori ON berita.id_kategori=kategori.id_kategori WHERE judul_berita LIKE '%$keyword%'");
                                     } else {
-                                        $query = mysqli_query($koneksi, "SELECT * FROM user WHERE role='$level' ORDER BY id_user  ASC LIMIT $start_from, $limit");
+                                        $query = mysqli_query($koneksi, "SELECT * FROM berita INNER JOIN kategori ON berita.id_kategori=kategori.id_kategori ORDER BY id_berita ASC LIMIT $start_from, $limit ");
                                     }
                                     while ($data = mysqli_fetch_array($query)) {
                                     ?>
-                                        <tr class="align-middle">
-                                            <td><?= $no++ ?></td>
-                                            <td><b><?= $data['username'] ?><b></td>
-                                            <td><?= $data['email'] ?></td>
-                                            <td><img src="../assets/profile/<?= $data['thumbnail'] ?>" style="width:50px; height:50px; border-radius:50%;"></td>
+                                        <tr>
+                                            <th scope="row"><?= $no++ ?></th>
+                                            <td style="width:150px; font-size:15px;"><b><?= $data['judul_berita'] ?><b></td>
+                                            <td><?= $data['nama_kategori'] ?></td>
+                                            <td><?= $data['penulis_berita'] ?></td>
+                                            <td><?= $data['tgl_berita'] ?></td>
                                             <td>
-                                                <div class="btn-group">
-                                                    <a href="editadminpage.php?id=<?= $data['id_user'] ?>" class="btn btn-dark" style="width:50px; font-size:12px; margin:2px;">Edit</a>
-                                                    <a href="deleteadmin.php?id=<?= $data['id_user'] ?>" class="btn btn-secondary delete-link" style="width:70px; font-size:12px; margin:2px;">Delete</a>
-                                                </div>
+                                                <img src="../assets/images/<?= $data['gambar_berita'] ?>" class="img-fluid" style="width:100px; height:100px;">
+                                            </td>
+                                            <td>
+                                                <!-- Tambahkan action untuk reviewer di sini -->
+                                                <a href="reviewberita.php?id_berita=<?= $data['id_berita'] ?>" class="btn btn-primary">Review</a>
                                             </td>
                                         </tr>
                                     <?php
@@ -98,14 +99,13 @@ $data = mysqli_fetch_array($query);
                                 </tbody>
                             </table>
                             <?php
-
-                            $result_db = mysqli_query($koneksi, "SELECT COUNT(*) as jumlah FROM user WHERE role='$level'");
+                            $result_db = mysqli_query($koneksi, "SELECT COUNT(*) as jumlah FROM berita");
                             $row_db = mysqli_fetch_row($result_db);
                             $total_records = $row_db[0];
                             $total_pages = ceil($total_records / $limit);
                             $pagLink = "<ul class='pagination'>";
                             for ($i = 1; $i <= $total_pages; $i++) {
-                                $pagLink .= "<li class='page-item'><a class='page-link bg-dark text-white' href='menudataadminpage.php?page=" . $i . "'>" . $i . "</a></li>";
+                                $pagLink .= "<li class='page-item'><a class='page-link bg-dark text-white' href='indexreviewer.php?page=" . $i . "'>" . $i . "</a></li>";
                             }
                             echo $pagLink . "</ul>";
                             ?>
@@ -115,26 +115,23 @@ $data = mysqli_fetch_array($query);
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>
-<?php
-include "footer.php";
-if (isset($_SESSION['status']) && $_SESSION['status'] != '') {
-?>
-    <script>
-        swal.fire({
-            title: "<?php echo $_SESSION['status']; ?>",
-            icon: "<?php echo $_SESSION['icon']; ?>",
-            text: "<?php echo $_SESSION['text']; ?>"
-        })
-    </script>
-<?php
-    unset($_SESSION['status']);
-    unset($_SESSION['icon']);
-    unset($_SESSION['text']);
-}
-?>
+    <?php
+    include "footer.php";
+    if (isset($_SESSION['status']) && $_SESSION['status'] != '') {
+    ?>
+        <script>
+            swal.fire({
+                title: "<?php echo $_SESSION['status']; ?>",
+                icon: "<?php echo $_SESSION['icon']; ?>",
+                text: "<?php echo $_SESSION['text']; ?>"
+            })
+        </script>
+    <?php
+        unset($_SESSION['status']);
+        unset($_SESSION['icon']);
+        unset($_SESSION['text']);
+    }
+    ?>
 </body>
 
 </html>

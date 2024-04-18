@@ -5,8 +5,6 @@ session_start();
  $id = $_GET['id'];
  $username = $_POST['username'];
  $email=$_POST['email'];
- $pekerjaan = $_POST['pekerjaan'];
- $jeniskelamin = $_POST['jeniskelamin'];
  $thumbnail = $_POST['thumbnail'];
  $extension_allowed = array('png', 'jpg','jpeg');
  $name = $_FILES['thumbnail']['name'];
@@ -18,8 +16,7 @@ session_start();
       if ($ukuran < 1044070) {
        move_uploaded_file($file_tmp, '../images/' . $name);
        $query = mysqli_query($koneksi, "UPDATE user SET 
-       username='$username', email='$email', jeniskelamin='$jeniskelamin',pekerjaan='$pekerjaan', 
-       thumbnail='$name' WHERE id='$_SESSION[id]'");
+       username='$username', email='$email', thumbnail='$name' WHERE id='$_SESSION[id]'");
           if ($query) {
             $_SESSION['status']="Profile Berhasil Diganti";
             $_SESSION['icon']="success";

@@ -1,8 +1,5 @@
-</div>
 
-</div>
-</section>
-</div>
+
 
 <footer class="text-center text-lg-start bg-dark">
     <p class="text-white text-center" style="padding-top: 15px;">Thank you for visiting our website </p>
@@ -35,7 +32,3 @@
 <script>
   AOS.init();
 </script>
-
-</body>
-
-</html>
