@@ -10,6 +10,13 @@ if (!isset($_SESSION['login'])) {
 }
 $id = $_GET['id_berita'];
 
+$query = mysqli_query($koneksi, "SELECT * FROM berita INNER JOIN kategori ON berita.id_kategori=kategori.id_kategori WHERE id_berita='$id'");
+$data = mysqli_fetch_array($query);
+$isi_berita = $data['isi_berita'];
+$jumlah_kata = str_word_count(strip_tags($isi_berita));
+
+$waktu_baca = ceil($jumlah_kata / 200);
+
 include "header.php";
 ?>
 <section id="content">
@@ -36,6 +43,7 @@ include "header.php";
               <p class="mt-0 ">Kategori : <?= $data['nama_kategori'] ?></p>
               <small class="mt-0">Penulis : <?= $data['penulis_berita'] ?></small> |
               <small class="mt-0">Publish : <?= $data['tgl_berita'] ?></small>
+              <small class="mt-0">Estimasi Waktu Baca: <span id="waktu-baca"><?= $waktu_baca ?></span> menit</small>
             </div>
             <hr>
             <div class="media-body">
@@ -82,6 +90,33 @@ include "header.php";
 <?php
 include "footer.php";
 ?>
+
+<script>
+  var estimasiWaktuBaca = <?= $waktu_baca ?>;
+  var displayWaktuBaca = document.querySelector('#waktu-baca');
+  var timer = estimasiWaktuBaca * 60;
+
+  function countdownTimer(duration, display) {
+    var minutes, seconds;
+    setInterval(function () {
+      minutes = parseInt(duration / 60, 10);
+      seconds = parseInt(duration % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--duration < 0) {
+        alert("Waktu baca telah habis!");
+        window.location.href = "user/indexuser.php?id_berita=<?= $id ?>"; 
+      }
+    }, 1000);
+  }
+
+  countdownTimer(timer, displayWaktuBaca);
+</script>
+
 </body>
 
 </html>
